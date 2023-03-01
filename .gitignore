@@ -1,0 +1,5 @@
+/PyCookieCloud.iml
+/.idea/
+/PyCookieCloud.egg-info/
+/**/__pycache__/
+/dist/
