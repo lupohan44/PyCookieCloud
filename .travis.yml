@@ -8,7 +8,4 @@ deploy:
   username: "__token__"
   password: "$PYPI_TOKEN"
   on:
-    branches:
-      only:
-        - master
-        - travis
+    branches: travis
