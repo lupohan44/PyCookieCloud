@@ -1,5 +1,6 @@
 Unofficial Python Wrapper Library for CookieCloud
 =======
+[![Build Status](https://app.travis-ci.com/lupohan44/PyCookieCloud.svg?branch=master)](https://app.travis-ci.com/lupohan44/PyCookieCloud)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/lupohan44)
 
