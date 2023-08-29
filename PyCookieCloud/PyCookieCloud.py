@@ -37,7 +37,7 @@ class PyCookieCloud:
         :return: The encrypted data if the connection is successful, None otherwise.
         """
         if self.check_connection():
-            cookie_cloud_request = requests.get(urljoin(self.url, '/get/' + self.uuid))
+            cookie_cloud_request = requests.get(urljoin(self.url, 'get/' + self.uuid))
             if cookie_cloud_request.status_code == 200:
                 cookie_cloud_response = cookie_cloud_request.json()
                 encrypted_data = cookie_cloud_response["encrypted"]
