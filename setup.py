@@ -17,6 +17,6 @@ setup(
     description='This is an unofficial Python wrapper library for CookieCloud (https://github.com/easychen/CookieCloud).',
     keywords=['cookiecloud', 'cookie', 'cloud', 'cookies', 'cookiecloud-python', 'pycookiecloud'],
     packages=['PyCookieCloud'],
-    install_requires=['requests', 'pycryptodome'],
+    install_requires=['requests', 'pycryptodomex'],
     long_description="This is an unofficial Python wrapper library for CookieCloud (https://github.com/easychen/CookieCloud)."
 )
