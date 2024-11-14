@@ -10,7 +10,7 @@ if sys.version_info[0] != 3:
 setup(
     name='PyCookieCloud',
     license='MIT',
-    version='1.0.3',
+    version='1.0.4',
     author='lupohan44',
     author_email='cptf_lupohan@126.com',
     url='https://github.com/lupohan44/PyCookieCloud',
