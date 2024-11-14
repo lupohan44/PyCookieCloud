@@ -2,7 +2,8 @@ import collections
 import hashlib
 import json
 from typing import Optional, Dict, List, Any
-from urllib.parse import urljoin
+from urllib.parse import urljoin,urlparse
+from pathlib import PurePosixPath
 
 import requests
 
@@ -14,6 +15,7 @@ class PyCookieCloud:
         self.url: str = url
         self.uuid: str = uuid
         self.password: str = password
+        self.api_root: str = urlparse(url).path if urlparse(url).path else '/'
 
     def check_connection(self) -> bool:
         """
@@ -37,7 +39,8 @@ class PyCookieCloud:
         :return: The encrypted data if the connection is successful, None otherwise.
         """
         if self.check_connection():
-            cookie_cloud_request = requests.get(urljoin(self.url, 'get/' + self.uuid))
+            path = str(PurePosixPath(self.api_root, 'get/', self.uuid))
+            cookie_cloud_request = requests.get(urljoin(self.url, path))
             if cookie_cloud_request.status_code == 200:
                 cookie_cloud_response = cookie_cloud_request.json()
                 encrypted_data = cookie_cloud_response["encrypted"]
